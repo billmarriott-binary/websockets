@@ -517,6 +517,7 @@ function isGHpages(url) {
 }
 
 function getBaseUrl(url) {
+    return 'https://billmarriott-binary.github.io/websockets-dev/';
     url = url || document.location.href;
     return (isProduction(url) || isLocal(url) || isGHpages(url) ? '' : '/' + url.split('/')[3]) + '/';
 }
