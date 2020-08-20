@@ -27,9 +27,6 @@ require.config({
     }
 });
 
-console.log(getBaseUrl());
-console.log("HELLO");
-
 require(["/lib/jquery.js"], function() {
     require(["/docson/docson.js", "/lib/select2.min.js"], init);
 });
