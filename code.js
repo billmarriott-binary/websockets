@@ -512,9 +512,13 @@ function isLocal(url) {
     return /\/\/(localhost|127\.0\.0\.1)/.test(url);
 }
 
+function isGHpages(url) {
+    return /\.github.io/.test(url);
+}
+
 function getBaseUrl(url) {
     url = url || document.location.href;
-    return (isProduction(url) || isLocal(url) ? '' : '/' + url.split('/')[3]) + '/';
+    return (isProduction(url) || isLocal(url) || isGHpages(url) ? '' : '/' + url.split('/')[3]) + '/';
 }
 
 function getServerUrl() {
